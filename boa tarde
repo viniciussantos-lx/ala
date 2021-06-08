@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="widh-device-widh, initial-scale-1.0">
+    <link rel="stylesheet" href="css/transition.css">
+    <title>Transition</title>
+</head>
+
+<body>
+    <h2>Transition e Transforms</h2>
+    <div id="div-img">
+        <ul>
+            <li><img src="img/sun.jpg.png" id="one"></li>
+            <li><img src="img/water.jpg.png" id="two"></li>
+            <li><img src="img/house.jpg.png" id="three"></li>
+        </ul>
+    </div>
+
+    <p class="square-circle">Circuferência</p>
+</body>
+
+</html>
+
+
+CSS
+
+#div-img {
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+#div-img ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#div-img li {
+    float: left;
+    margin-right: 10px;
+}
+
+#div-img li:last-of-type {
+    margin-right: 0;
+}
+
+#div-img img {
+    width: 180px;
+    height: 110px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    transition: transform .3s ease-in-out;
+}
+
+#div-img li:hover img {
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .3);
+}
+
+#div-img li:hover #one, li:hover #one {
+    transform: scale(1.2) rotate(-3deg);
+}
+
+#div-img li:hover #two, li:focus #two {
+    transform: scale(1.2) rotate(5deg);
+}
+
+#div-img li:hover #three, li:focus #three {
+    transform: scale(1.2) rotate(-7deg);
+}
+
+/* ---------- Circuferência --------- */
+p.square-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: #fff;
+    border: 10px solid lightblue;
+    margin: 1em auto 1em auto;
+    width: 200px;
+    padding: 10px 10px;
+    font-weight: bold;
+    transition-property: border-radius, letter-spacing, 
+    color;
+    transition-duration: 1s;
+}
+
+.square-circle {
+    border-radius: 50px;
+    letter-spacing: 5px;
+    color: blue;
+    font-weight: 600;
+}
